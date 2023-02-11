@@ -1,0 +1,64 @@
+:root {
+    --offcanvas-width: 270px;
+    --topNavbarHeight: 56px;
+}
+
+.sidebar-nav {
+    width: var(--offcanvas-width) !important;
+    position: fixed;
+
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    color: white !important;
+}
+
+.sidebar-link .right-icon {
+    display: inline-flex;
+    color: white !important;
+}
+
+.sidebar-link[aria-expanded="true"] .right-icon {
+    transform: rotate(180deg);
+    color: white !important;
+
+}
+
+@media (min-width:992px) {
+    body {
+        overflow: auto !important;
+    }
+
+    .offcanvas-backdrop::before {
+        display: none !important;
+    }
+
+    main {
+        margin-left: var(--offcanvas-width);
+    }
+
+    .sidebar-nav {
+        transform: none !important;
+        visibility: visible !important;
+        top: var(--topNavbarHeight) !important;
+        height: calc(100-var(--topNavbarHeight)) !important;
+    }
+}
+
+.table{
+    margin-top:5px;
+    margin-left:5px;
+    border:2px solid black
+}
+#signup{
+    border:2px solid black ;
+    margin-top:6px;
+    text-align: center;
+    width: 100%;
+}
+form{
+    padding-left:10px;
+    padding-right:10px;
+}
